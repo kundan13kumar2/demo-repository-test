@@ -4,7 +4,7 @@ public class Test implements Runnable
 {
     public static Thread thread1;
     public static Test obj;
-     
+       
     public static void main(String[] args)
     {
         obj = new Test();
