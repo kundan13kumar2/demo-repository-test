@@ -4,7 +4,7 @@ public class ProducerConsumerProblem {
 	public static void main(String[] args) throws InterruptedException {
 		SharedResource resource = new SharedResource();
 		Thread t1 = new Thread(new Runnable() {
-
+ 
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
