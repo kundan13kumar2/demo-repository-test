@@ -17,7 +17,7 @@ public class SemThread extends Thread{
 	@Override
 	public void run()
 	{
-		if(Shared.count<=0)
+		if(threadName.equals("A"))
 		{
 			System.out.println(" Thread acuired the lock : "+threadName);
 			try {
@@ -38,6 +38,29 @@ public class SemThread extends Thread{
 				}
 			}
 			sem.release();
+		}
+		else
+		{
+			System.out.println(" Thread acuired the lock : "+threadName);
+			try {
+				sem.acquire();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			for(int i=0;i<5;i++)
+			{
+				Shared.count--;
+				System.out.println("Remaining count available : "+Shared.count);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			sem.release();
+		
 		}
 		
 	}
