@@ -5,6 +5,7 @@ public class thread implements Runnable
     public void run()
     {
         // moving thread2 to timed waiting state
+    	
         try
         {
             Thread.sleep(1500);
