@@ -7,7 +7,7 @@ class GFG
 //    	try
 //        {
 //            double data =  (4.0/ 0);
-            System.out.println(6.0/0);
+            System.out.println(7/0);
 //        }
 //        catch(Exception e)
 //        {
